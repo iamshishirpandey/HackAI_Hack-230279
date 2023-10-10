@@ -42,3 +42,8 @@ flutter run
 
 🎉 Conclusion
 The Temperature Alert Agent is a holistic solution, bridging the backend and frontend, to ensure users are always in the know about temperature changes in their selected location. By synergizing the capabilities of Fetch.ai’s uAgents library, Flask, Firebase, and Flutter, it offers users the convenience to set preferences and the assurance of real-time alerts right on their devices. Stay informed, stay prepared! 🌞❄️
+
+Screenshots
+![Alt text](Frontend/temperature_alert_agent/screenshots/387519754_622482696711801_1047026419557706834_n.jpg)
+![Alt text](Frontend/temperature_alert_agent/screenshots/387536797_982469339479950_5461263956054018114_n.jpg)
+![Alt text](Frontend/temperature_alert_agent/screenshots/387459107_1495826007879630_4247536303817049981_n.jpg)
