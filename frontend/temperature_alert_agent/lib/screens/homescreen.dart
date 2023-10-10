@@ -34,7 +34,7 @@ class _HomepageState extends State<Homepage> {
 
   Future<void> _setPreferences() async {
     final response = await http.post(
-      Uri.parse('http://10.0.2.2:5000/set_preferences'),
+      Uri.parse('http://192.168.1.71:5000/set_preferences'),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({
         'latitude': _latitudeController.text,
@@ -52,7 +52,7 @@ class _HomepageState extends State<Homepage> {
   }
 
   Future<void> _fetchTemperature() async {
-    final response = await http.get(Uri.parse('http://10.0.2.2:5000/get_temperature'));
+    final response = await http.get(Uri.parse('http://192.168.1.71:5000/get_temperature'));
 
     if (response.statusCode == 200) {
       setState(() {
