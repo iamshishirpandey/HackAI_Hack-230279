@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:http/http.dart' as http;
@@ -33,14 +34,24 @@ class _HomepageState extends State<Homepage> {
   }
 
   Future<void> _setPreferences() async {
+    FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
+
+    String? fcmToken;
+    try {
+      fcmToken = await _firebaseMessaging.getToken();
+    } catch (e) {
+      print('Failed to get FCM token: $e');
+    }
+    print(fcmToken);
     final response = await http.post(
       Uri.parse('http://192.168.1.71:5000/set_preferences'),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({
         'latitude': _latitudeController.text,
         'longitude': _longitudeController.text,
-        'min_temp': int.parse(_minTempController.text),
-        'max_temp': int.parse(_maxTempController.text),
+        'min_temp': double.parse(_minTempController.text),
+        'max_temp': double.parse(_maxTempController.text),
+        'fcm_token': fcmToken, // Send the FCM token
       }),
     );
 
