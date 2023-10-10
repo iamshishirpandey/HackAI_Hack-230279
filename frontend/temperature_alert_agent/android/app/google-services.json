@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "315477108762",
+    "project_id": "techfest-df7f5",
+    "storage_bucket": "techfest-df7f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315477108762:android:a5344e6fa9a62a867809a3",
+        "android_client_info": {
+          "package_name": "com.kings.temperature_alert_agent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAicWJJpCwhWnqtmE8N2Y0bIvDsMgsALYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
